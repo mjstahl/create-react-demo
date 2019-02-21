@@ -27,5 +27,5 @@ fs.mkdir(directory, { recursive: true }, (err) => {
   fs.writeFileSync(`${directory}/package.json`, JSON.stringify(packageJSON, null, 2))
 
   const files = ['index.html', 'index.js', '.babelrc']
-  files.forEach(f => fs.copyFileSync(`${f}`, `${directory}/${f}`))
+  files.forEach(f => fs.copyFileSync(`${__dirname}/${f}`, `${directory}/${f}`))
 })
