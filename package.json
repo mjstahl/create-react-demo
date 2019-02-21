@@ -1,6 +1,6 @@
 {
   "name": "quick-react-demo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Quickly create React demos using Parcel",
   "main": "index.js",
   "bin": {
