@@ -28,6 +28,6 @@ fs.mkdir(directory, { recursive: true }, (err) => {
 
   const files = ['index.html', 'index.js', '.babelrc']
   files.forEach(f => {
-    fs.copyFileSync(`templates/${f}`, `${directory}/${f}`)
+    fs.copyFileSync(`./templates/${f}`, `${directory}/${f}`)
   })
 })
