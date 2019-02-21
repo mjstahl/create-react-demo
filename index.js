@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs')
+const path = require('path')
 const process = require('process')
 const { spawnSync } = require('child_process')
 
@@ -9,7 +10,7 @@ if (process.argv.length < 3) {
   return 1
 }
 
-const directory = `${process.cwd()}/${process.argv[2]}`
+const directory = path.join(process.cwd(),process.argv[2])
 fs.mkdir(directory, { recursive: true }, (err) => {
   if (err) throw err
 
@@ -26,6 +27,8 @@ fs.mkdir(directory, { recursive: true }, (err) => {
   packageJSON.scripts['start'] = "parcel index.html"
   fs.writeFileSync(`${directory}/package.json`, JSON.stringify(packageJSON, null, 2))
 
-  const files = ['index.html', 'index.js', '.babelrc']
-  files.forEach(f => fs.copyFileSync(`${__dirname}/${f}`, `${directory}/${f}`))
+  const files = ['demo.html', 'demo.js', '.babelrc']
+  files.forEach(f => {
+    fs.copyFileSync(path.join(__dirname, f), path.join(directory, f))
+  })
 })
