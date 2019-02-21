@@ -1,7 +1,7 @@
 {
-  "name": "create-react-demo",
+  "name": "quick-react-demo",
   "version": "1.0.0",
-  "description": "Executable for quickly creating react demos using Parcel",
+  "description": "Quickly create React demos using Parcel",
   "main": "index.js",
   "bin": {
     "create-react-demo": "./index"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/mjstahl/create-react-demo.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mark Stahl <mjstahl@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mjstahl/create-react-demo/issues"
