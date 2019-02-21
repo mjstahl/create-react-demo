@@ -24,7 +24,7 @@ fs.mkdir(directory, { recursive: true }, (err) => {
   spawnSync('npm i -D babel-core babel-preset-env babel-preset-react parcel-bundler', execOptions)
 
   const packageJSON = JSON.parse(fs.readFileSync(`${directory}/package.json`))
-  packageJSON.scripts['start'] = "parcel index.html"
+  packageJSON.scripts['start'] = "parcel demo.html"
   fs.writeFileSync(`${directory}/package.json`, JSON.stringify(packageJSON, null, 2))
 
   const files = ['demo.html', 'demo.js', '.babelrc']
